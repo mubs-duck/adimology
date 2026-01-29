@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import TokenStatusIndicator from './TokenStatusIndicator';
 import JobStatusIndicator from './JobStatusIndicator';
 import ThemeToggle from './ThemeToggle';
+import { Github } from 'lucide-react';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -64,6 +65,21 @@ const Navbar = () => {
             <JobStatusIndicator />
             <TokenStatusIndicator />
             <ThemeToggle />
+            <a 
+              href="https://github.com/bhaktiutama/adimology" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                color: 'var(--text-secondary)',
+                transition: 'color 0.2s',
+              }}
+              className="github-link"
+              title="View on GitHub"
+            >
+              <Github size={20} />
+            </a>
           </div>
         </div>
       </div>
